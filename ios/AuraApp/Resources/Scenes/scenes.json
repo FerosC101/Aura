@@ -1,0 +1,307 @@
+[
+  {
+    "key": "clinic",
+    "title": "Clinic Consultation",
+    "subtitle": "The words you cannot afford to mishear",
+    "description": "A consultation room with the door open. A doctor explains a dose while a waiting room talks outside, an air-conditioner runs, and a television plays at the counter. A monitor alarms partway through. AURA should lift the doctor, push the room down, and never touch the alarm.",
+    "duration": 14.0,
+    "mode": "care",
+    "expect": {
+      "human_speech": "enhance",
+      "crowd_speech": "suppress",
+      "mechanical_noise": "reduce",
+      "music": "reduce",
+      "alarm": "preserve"
+    },
+    "highlights": [
+      "The doctor comes forward",
+      "Waiting room, aircon and TV step back",
+      "The monitor alarm is never suppressed"
+    ],
+    "layers": [
+      {
+        "category": "mechanical_noise",
+        "gain_db": -9.0,
+        "start": 0.0,
+        "end": 14.0
+      },
+      {
+        "category": "crowd_speech",
+        "gain_db": -11.0,
+        "start": 0.0,
+        "end": 14.0
+      },
+      {
+        "category": "music",
+        "gain_db": -10.0,
+        "start": 0.5,
+        "end": 14.0
+      },
+      {
+        "category": "human_speech",
+        "gain_db": -8.0,
+        "start": 1.5,
+        "end": 12.0
+      },
+      {
+        "category": "alarm",
+        "gain_db": -4.0,
+        "start": 8.5,
+        "end": 10.5
+      }
+    ]
+  },
+  {
+    "key": "psc_demo",
+    "title": "PSC Demo Scene",
+    "subtitle": "Five sources, one decision each",
+    "description": "Engine noise and crowd conversation run throughout. A selected speaker talks over them. A horn sounds once; a siren passes later. AURA should hold the speaker, the horn and the siren while pushing the engine and the crowd down.",
+    "duration": 12.0,
+    "mode": "commute",
+    "expect": {
+      "human_speech": "preserve",
+      "vehicle_horn": "preserve",
+      "emergency_siren": "preserve",
+      "engine_noise": "suppress",
+      "crowd_speech": "reduce"
+    },
+    "highlights": [
+      "Engine and crowd drop away",
+      "The speaker stays clear",
+      "Horn and siren are never suppressed"
+    ],
+    "layers": [
+      {
+        "category": "engine_noise",
+        "gain_db": -13.0,
+        "start": 0.0,
+        "end": 12.0
+      },
+      {
+        "category": "crowd_speech",
+        "gain_db": -11.0,
+        "start": 0.0,
+        "end": 12.0
+      },
+      {
+        "category": "human_speech",
+        "gain_db": -8.0,
+        "start": 1.0,
+        "end": 11.0
+      },
+      {
+        "category": "vehicle_horn",
+        "gain_db": -7.0,
+        "start": 4.0,
+        "end": 5.2
+      },
+      {
+        "category": "emergency_siren",
+        "gain_db": -9.0,
+        "start": 7.5,
+        "end": 11.0
+      }
+    ]
+  },
+  {
+    "key": "jeepney",
+    "title": "Jeepney / Bus Commute",
+    "subtitle": "EDSA, rush hour",
+    "description": "Diesel rumble and road noise fill the cabin while passengers talk. The conductor calls out and announcements come over a tinny speaker. AURA keeps the conductor and the announcements, and the horns outside.",
+    "duration": 14.0,
+    "mode": "commute",
+    "expect": {
+      "human_speech": "preserve",
+      "announcement": "enhance",
+      "vehicle_horn": "preserve",
+      "engine_noise": "suppress",
+      "general_traffic": "reduce",
+      "crowd_speech": "reduce"
+    },
+    "highlights": [
+      "Conductor and announcements stay up",
+      "Diesel rumble suppressed",
+      "Horns outside still reach you"
+    ],
+    "layers": [
+      {
+        "category": "engine_noise",
+        "gain_db": -10.0,
+        "start": 0.0,
+        "end": 14.0
+      },
+      {
+        "category": "general_traffic",
+        "gain_db": -11.0,
+        "start": 0.0,
+        "end": 14.0
+      },
+      {
+        "category": "crowd_speech",
+        "gain_db": -14.0,
+        "start": 0.0,
+        "end": 14.0
+      },
+      {
+        "category": "human_speech",
+        "gain_db": -9.0,
+        "start": 2.0,
+        "end": 6.0
+      },
+      {
+        "category": "announcement",
+        "gain_db": -10.0,
+        "start": 7.0,
+        "end": 10.5
+      },
+      {
+        "category": "vehicle_horn",
+        "gain_db": -8.0,
+        "start": 11.5,
+        "end": 12.6
+      }
+    ]
+  },
+  {
+    "key": "classroom",
+    "title": "University Classroom",
+    "subtitle": "Lecture with hallway noise",
+    "description": "An instructor speaks over ceiling fans and chatter drifting in from the corridor. AURA holds the instructor and keeps the fire alarm audible, while distant conversation and fan noise recede.",
+    "duration": 14.0,
+    "mode": "focus",
+    "expect": {
+      "human_speech": "preserve",
+      "alarm": "preserve",
+      "crowd_speech": "suppress",
+      "mechanical_noise": "suppress"
+    },
+    "highlights": [
+      "Instructor stays intelligible",
+      "Hallway chatter and fans suppressed",
+      "The fire alarm always comes through"
+    ],
+    "layers": [
+      {
+        "category": "mechanical_noise",
+        "gain_db": -15.0,
+        "start": 0.0,
+        "end": 14.0
+      },
+      {
+        "category": "crowd_speech",
+        "gain_db": -14.0,
+        "start": 0.0,
+        "end": 14.0
+      },
+      {
+        "category": "human_speech",
+        "gain_db": -9.0,
+        "start": 0.5,
+        "end": 9.0
+      },
+      {
+        "category": "alarm",
+        "gain_db": -13.0,
+        "start": 10.5,
+        "end": 13.5
+      }
+    ]
+  },
+  {
+    "key": "urban_walk",
+    "title": "Urban Walking",
+    "subtitle": "Crossing a busy street",
+    "description": "Continuous traffic ambience with a vehicle closing in, a horn, and a siren. Everything that can hit you is preserved or enhanced; the repetitive city bed is trimmed but never removed.",
+    "duration": 14.0,
+    "mode": "walk",
+    "expect": {
+      "approaching_vehicle": "enhance",
+      "vehicle_horn": "enhance",
+      "emergency_siren": "enhance",
+      "bicycle_bell": "enhance",
+      "general_traffic": "reduce",
+      "crowd_speech": "reduce"
+    },
+    "highlights": [
+      "Approaching vehicle lifted early",
+      "Horn, bell and siren all protected",
+      "Traffic trimmed, never silenced"
+    ],
+    "layers": [
+      {
+        "category": "general_traffic",
+        "gain_db": -13.0,
+        "start": 0.0,
+        "end": 14.0
+      },
+      {
+        "category": "crowd_speech",
+        "gain_db": -20.0,
+        "start": 0.0,
+        "end": 14.0
+      },
+      {
+        "category": "approaching_vehicle",
+        "gain_db": -9.0,
+        "start": 2.0,
+        "end": 6.0
+      },
+      {
+        "category": "vehicle_horn",
+        "gain_db": -7.0,
+        "start": 6.2,
+        "end": 7.2
+      },
+      {
+        "category": "bicycle_bell",
+        "gain_db": -7.0,
+        "start": 8.5,
+        "end": 10.0
+      },
+      {
+        "category": "emergency_siren",
+        "gain_db": -9.0,
+        "start": 10.5,
+        "end": 13.5
+      }
+    ]
+  },
+  {
+    "key": "cafe",
+    "title": "Cafe Conversation",
+    "subtitle": "One voice in a loud room",
+    "description": "Music and competing conversation fill a cafe. With Person Lock on the person across the table, their voice is lifted above the room.",
+    "duration": 12.0,
+    "mode": "social",
+    "expect": {
+      "human_speech": "enhance",
+      "crowd_speech": "suppress",
+      "music": "reduce"
+    },
+    "highlights": [
+      "The person you chose comes forward",
+      "Competing conversation pushed back",
+      "Music reduced, not removed"
+    ],
+    "layers": [
+      {
+        "category": "music",
+        "gain_db": -16.0,
+        "start": 0.0,
+        "end": 12.0
+      },
+      {
+        "category": "crowd_speech",
+        "gain_db": -13.0,
+        "start": 0.0,
+        "end": 12.0
+      },
+      {
+        "category": "human_speech",
+        "gain_db": -8.0,
+        "start": 0.5,
+        "end": 11.5
+      }
+    ]
+  }
+]

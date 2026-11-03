@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+node_modules/
+ui/dist/
+.DS_Store
+ios/build/
+ios/AuraCore/.build/
+ios/AuraCore/.swiftpm/
+*.xcuserstate
+xcuserdata/
